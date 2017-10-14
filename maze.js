@@ -31,6 +31,12 @@ var flag = false; //keep track if the user hit any maze walls.
  function startGame() {
  	flag = false;
      var allboun = document.querySelectorAll("div#maze div.boundary");
+	 document.addEventListener("mouseover", function(){
+     	if (event.clientX < maze.offsetLeft || event.clientY > maze.offsetRight)
+     	{
+     		turnRed();
+     	}
+     });
      for (var x = 0; x < allboun.length; x++){
          allboun[x].setAttribute("class", "boundary");
      }
