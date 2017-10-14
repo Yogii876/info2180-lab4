@@ -20,10 +20,11 @@ var flag = false; //keep track if the user hit any maze walls.
  }
  
  function gameOver() {
+	 var stat = document.getElementById("status");
      if(flag) {
-         alert("Oops! You lost.");
+         stat.innerHTML = "Oops! You lost.";
       } else {
-          alert("Congratulations! You win! :)");
+          stat.innerHTML = "Congratulations! You win! :)";
       }
  }
  
